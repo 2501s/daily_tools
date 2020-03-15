@@ -12,9 +12,7 @@ def main():
     if run == "y":
         countdown(timer_length)
         print_time_up()
-        sp.run(['mpv', '/home/z/git/daily_tools/horn.wav'])
-        time.sleep(10)
-        sp.run(['mpv', '/home/z/git/daily_tools/horn.wav'])
+        sound_alert()
 
 def countdown(timer_length):
     print("Minutes passed:")
@@ -31,5 +29,7 @@ def print_time_up():
     print("  |_| |_|_| |_| |_|\___|  \__,_| .__/ ")
     print("                               |_|    ")
     
+def sound_alert():
+    ''' Play sound to alert the user that time is up '''
 
 main()
